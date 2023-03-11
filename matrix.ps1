@@ -12,19 +12,20 @@ $i = 0;
 $ih = 0;
 while (1)
 {
-while ($ih -le $height)
-{
-while ($i -le $width)
-{
-    $screen = -join($screen, " ", (Get-Random 10));
-    $i++;
-}
-echo $screen;
-$i = 0;
-$ih++;
+    while ($ih -le $height)
+    {
+        while (($screen.Length +1) -le $width)
+        {
+           $screen = -join($screen, " ", (Get-Random 10));
+             $i++;
+        }
+    echo $screen;
+    $i = 0;
+    $screen = "";
+    $ih++;
 
 
-}
-$screen = " ";
+    }
+$screen = "";
 $ih = 0;
 }
